@@ -62,7 +62,7 @@ public class Planet {
 	}
 
 	public boolean isClock() {
-		return Clock;
+		return clock;
 	}
 
 	public void setClock(boolean clock) {
