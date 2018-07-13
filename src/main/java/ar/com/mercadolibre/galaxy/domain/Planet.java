@@ -10,14 +10,14 @@ public class Planet {
 	private double speed;
 	private double positionInDagrees;
 	private Position position;
-	private boolean antiClock;
+	private boolean clock;
 
-	public Planet(String name, double distanceToSun, double speed, double positionInDagrees, boolean antiClock) {
+	public Planet(String name, double distanceToSun, double speed, double positionInDagrees, boolean clock) {
 		this.name = name;
 		this.distanceToSun = distanceToSun;
 		this.speed = speed;
 		this.positionInDagrees = positionInDagrees;
-		this.antiClock = antiClock;
+		this.clock = clock;
 		this.position = new Position();
 	}
 
@@ -61,12 +61,12 @@ public class Planet {
 		this.name = name;
 	}
 
-	public boolean isAntiClock() {
-		return antiClock;
+	public boolean isClock() {
+		return Clock;
 	}
 
-	public void setAntiClock(boolean antiClock) {
-		this.antiClock = antiClock;
+	public void setClock(boolean clock) {
+		this.clock = clock;
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class Planet {
 	 */
 	public void incrementOneDay() {
 		double dagrees = 0.0;
-		if (antiClock) {
+		if (clock) {
 			dagrees = this.positionInDagrees - this.speed;
 			if (dagrees < 0) {
 				dagrees += 360;
