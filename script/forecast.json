@@ -1,0 +1,1 @@
+{"TableName":"forecast","KeyS'chema":[{"AttributeName":"day","KeyType":"HASH"}],"AttributeDefinitions":[{"AttributeName":"day","AttributeType":"N"}],"ProvisionedThroughput":{"ReadCapacityUnits":1,"WriteCapacityUnits":1}}
